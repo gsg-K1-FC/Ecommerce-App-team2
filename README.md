@@ -4,11 +4,10 @@ This is an ecommerce app which gives features for both customers to buy items fr
 This is the final project of the fundamentals course of Gaza Sky Geeks. The purpose of the website is to make it easeier for sellers to market the products and for buyers to buy them.
 # How?
 1. Designing the project
-
 <img  alt="index.html"  width="100px"  align= "left" src="https://user-images.githubusercontent.com/70339752/99193526-444c1280-2782-11eb-800d-79b1dfe1f4ba.png">
+<img alt="style.css" width= "100px" align="left" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"> <br> <br> <br> <br> 
 
-<img alt="style.css" width= "100px" align="left" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png">
-
+<br>
 
 2. Making this website functional.
 
@@ -19,7 +18,8 @@ src= "https://p1.hiclipart.com/preview/951/574/485/react-logo-javascript-redux-v
 3. Connecting it with github.
 <img alt="github" width= "100px"  align="left" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png">
 <img alt="git-bash" width= "100px"  align="left"
-src="https://user-images.githubusercontent.com/70339752/99193880-68105800-2784-11eb-8f80-d26ff914e62a.png">
+src="https://user-images.githubusercontent.com/70339752/99193880-68105800-2784-11eb-8f80-d26ff914e62a.png"> <br>  <br> <br> <br> <br>
+
 
 
 

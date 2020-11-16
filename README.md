@@ -30,8 +30,8 @@ src="https://user-images.githubusercontent.com/70339752/99193880-68105800-2784-1
 
 * Search for products, so that you can find the ones you want to buy.
 *  Filter items by price or by category, so that you can break down long lists of products into manageable results.
-* Add items to my cart so that you can put all of your want-to-buy products in one place, review them to make adjustments in quantity, and product attributes, etc.
-* See the items inside your cart so that you can remove items before or during the checkout if you change your mind.
+* Add items to your cart,which enables you to put all of your want-to-buy products in one place, review them to make adjustments in quantity, and product attributes, etc.
+* See the items inside your cart , by that you can remove items before or during the checkout if you change your mind.
 * Delete any items inside your cart so that you don’t need to start over in the shopping process.
 * See the total price of the items inside your cart so that you can see how much you have to pay and compare prices for the same product or service or maybe change your decision. 
 * See the items ordered as a list or grid.

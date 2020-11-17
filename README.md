@@ -1,3 +1,5 @@
+# Link for the initial design_ 
+https://www.figma.com/file/2W1rfsbd1PKzDgLnXClMe7/E-Commerce-Team-2?node-id=0%3A1
 # What ?
 This is an ecommerce app which gives features for both customers to buy items from the store, and the seller who add these items to sell them.
 # Why?
@@ -14,12 +16,17 @@ This is the final project of the fundamentals course of Gaza Sky Geeks. The purp
 
 <img alt="script.js" width= "80px" 
 src= "https://p1.hiclipart.com/preview/951/574/485/react-logo-javascript-redux-vuejs-angular-angularjs-expressjs-front-and-back-ends-png-clipart.jpg">
+<br>
+Javascript
 
 3. Connecting it with github.
-
+                                                      
 <img alt="github" width= "100px"  align="left" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png">
-<img alt="git-bash" width= "100px"  align="left"
-src="https://user-images.githubusercontent.com/70339752/99193880-68105800-2784-11eb-8f80-d26ff914e62a.png"> <br>  <br> <br> <br> <br>
+<img alt="git-bash" width= "100px"  align="left" src="https://user-images.githubusercontent.com/70339752/99193880-68105800-2784-11eb-8f80-d26ff914e62a.png"> <br>  <br> <br> <br> <br>
+ --->(git hub)<---
+ ---> (git bash)<---
+
+
 
 
 

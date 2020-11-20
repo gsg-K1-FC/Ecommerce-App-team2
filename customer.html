@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/customer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/34321f5008.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fashion-Customer page</title>
+</head>
+<body>
+    <header class="header cs">
+        <a href="index.html" class="brandName">Fashion</a>
+        <div class="search-container">
+         <form >
+           <input type="text" placeholder="Search.." name="search">
+           <button type="submit"><i class="fa fa-search"></i></button>
+         </form>
+        </div>
+        <button id="customerbtn">Customer</button>
+        <button id="sellerbtn">Seller</button>
+        
+    </header>
+
+    <div class="navmenu">
+        <a href="#">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn" >Categories <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="#">Clothes</a>
+                <a href="#">Make up</a>
+                <a href="#">Shoes</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Filter by price <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <a href="#">Low to High</a>
+                <a href="#">High to low</a>
+            </div>
+        </div>
+
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+
+    </div>
+    <div class="product-container">
+        <div class="products">
+          <div class="card">
+            <img class="image-style" src="/images/coot.jpg">
+            <i class="fas fa-cart-plus"></i>
+          </div>
+          <div class="card">
+            <img class="image-style" src="/images/images.jpg">
+            <i class="fas fa-cart-plus"></i>
+          </div>
+          <div class="card">
+            <img class="image-style" src="/images/scarf.webp">
+            <i class="fas fa-cart-plus"></i>
+          </div>
+        </div>
+        <div class="products">
+            <div class="card">
+              <img class="image-style" src="/images/sub-buzz-2788-1551295669-1.jpg">
+              <i class="fas fa-cart-plus"></i>
+            </div>
+            <div class="card">
+              <img class="image-style" src="/images/nike.jpg">
+              <i class="fas fa-cart-plus"></i>
+            </div>
+            <div class="card">
+              <img class="image-style" src="/images/nyk_sccmlt_new_1_wakeup-makeup.jpg">
+              <i class="fas fa-cart-plus"></i>
+            </div>
+          </div>
+
+    </div>
+
+
+   
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

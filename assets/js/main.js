@@ -1,6 +1,9 @@
-document.getElementById("addbtn").onclick = function(){
+document.getElementById("sellerbtn").onclick = function(){
     location.href= "seller.html";
 }
-document.getElementById("shopbtn").onclick = function(){
-    location.href= "custmer.html";
+document.getElementById("customerbtn").onclick = function(){
+    location.href= "customer.html";
+}
+document.getElementById("homebtn").onclick = function(){
+    location.href= "index.html";
 }

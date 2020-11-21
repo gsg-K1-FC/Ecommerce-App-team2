@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/customer.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://kit.fontawesome.com/34321f5008.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap" rel="stylesheet">
@@ -12,48 +12,75 @@
     <title>Fashion-Customer page</title>
 </head>
 <body>
-    <div class="product-container">
+<header class="header cs">
+  <a href="index.html" class="brandName">Fashion</a>
+  <div class="search-container">
+   <form >
+     <input type="text" placeholder="Search.." name="search">
+     <button type="submit"><i class="fa fa-search"></i></button>
+   </form>
+  </div>
+  <a href="customer.html" id="customerbtn">Customer</a>
+  <a href="seller.html" id="sellerbtn">Seller</a>
+  
+</header>
+
+<div class="navmenu">
+  <a href="./index.html">Home</a>
+  <div class="dropdown">
+      <button class="dropbtn" >Categories <i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content" id="myDropdown">
+          <a href="#">Clothes</a>
+          <a href="#">Make up</a>
+          <a href="#">Shoes</a>
+      </div>
+  </div>
+  <div class="dropdown">
+      <button class="dropbtn">Filter by price <i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+          <a href="#">Low th High</a>
+          <a href="#">High to low</a>
+      </div>
+  </div>
+</div>
+<div class="product-container">
         <div class="products">
-          <!-- <div class="card">
-            <img class="image-style" src="/images/coot.jpg">
+          <div class="card">
+            <img class="image-style" src="./assets/images/coot.jpg">
             <h3 class="item">Women’s Trench Coat</h3>
             <i class="fas fa-cart-plus"></i>
 
           </div>
           <div class="card">
-            <img class="image-style" src="/images/images.jpg">
+            <img class="image-style" src="./assets/images/images.jpg">
             <h3 class="item">Leather Boot</h3>
             <i class="fas fa-cart-plus"></i>
           </div>
           <div class="card">
-            <img class="image-style" src="/images/scarf.webp">
+            <img class="image-style" src="./assets/images/scarf.webp">
             <h3 class="item">Grey Scarf</h3>
             <i class="fas fa-cart-plus"></i>
           </div>
         </div>
         <div class="products">
             <div class="card">
-              <img class="image-style" src="/images/palette.jpg">
+              <img class="image-style" src="./assets/images/palette.jpg">
               <h3 class="item">Eyeshadow Palette</h3>
               <i class="fas fa-cart-plus"></i>
             </div>
             <div class="card">
-              <img class="image-style" src="/images/nike.jpg">
+              <img class="image-style" src="./assets/images/nike.jpg">
               <h3 class="item">Sneaker Boot</h3>
               <i class="fas fa-cart-plus"></i>
             </div>
             <div class="card">
-              <img class="image-style" src="/images/nyk_sccmlt_new_1_wakeup-makeup.jpg">
+              <img class="image-style" src="./assets/images/nyk_sccmlt_new_1_wakeup-makeup.jpg">
               <h3 class="item">Matte Lipstick</h3>
               <i class="fas fa-cart-plus"></i>
-            </div> -->
+            </div>
           </div>
 
     </div>
-
-
-   
-    <script src="./assets/js/main.js"></script>
     <script src="./assets/js/customer.js"></script>
 </body>
 </html>

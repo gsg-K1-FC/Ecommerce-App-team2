@@ -18,7 +18,7 @@ let products=[{
     name: "T-shirt",
     price: 25,
     category: "clothes",
-    URL: "./images/coot.jpg"},
+    URL: "../../assets/images/coot.jpg"},
     {
         id: 1, 
         name: "T-shirt",
@@ -30,7 +30,17 @@ let products=[{
         productWrapper.appendChild(card);
         let productImage = document.createElement("img");
         productImage.src = product.URL;
+        let categoryPrice = document.createElement("div");
         card.appendChild(productImage);
+        let productName = document.createElement("span");
+        card.appendChild(productName);
+        let productPrice = document.createElement("h3");
+        card.appendChild(productPrice);
+        let productCategory = document.createElement("h3");
+        card.appendChild(productCategory);
+        let descrption = document.createElement("div");
+        card.appendChild(descrption);
+        
     })
     
 

@@ -19,7 +19,7 @@ let products=[{
             category: "clothes",
             URL: "../../assets/images/scarf.webp"}];
         let cartItem=[];
-
+function createCart(products){
     products.forEach(function(product){
         let card = document.createElement("div");
         card.className = 'cardInfo';
@@ -48,12 +48,16 @@ let products=[{
             console.log(cartItem);
         })
     });
+}
+createCart(products);
     let icon = document.getElementById('searchBtn');
     icon.addEventListener('click', function(e){
         e.preventDefault();
         let item = document.getElementById("search-engine").value;
         console.log(item);
-        let filterProducts = products.filter((product) => product.name == item);
-        console.log(filterProducts);
+        document.querySelectorAll('.cardInfo').forEach(function(a){
+            a.remove()
+            })
+        products = products.filter((product) => product.name == item);
+        createCart(products);
     })
-    

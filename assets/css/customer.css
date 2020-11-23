@@ -18,7 +18,7 @@
         height: 180px;
         margin: 20px 0px;
     }
-    .card{
+    .cardInfo{
         height: 300px;
         width: 300px;
         background-color: white;
@@ -29,10 +29,8 @@
         border: 1px solid #d6d6c2;
         border-radius: 8px;
     }
-    .card i{
+    .cardInfo i{
         font-size: 2rem; 
         position:relative;
-        left:120px;
-
       } 
 

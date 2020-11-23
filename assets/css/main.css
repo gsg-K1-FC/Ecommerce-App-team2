@@ -293,3 +293,87 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  .cart-info{
+      width: 80%;
+      margin-left: 10%;
+      height: 160px;
+      background-color: turquoise;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .cart-detail, .cart-detail-value{
+    height: 100%;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    
+  }
+  .cart-detail h5, .cart-detail-value h5{
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 40px;
+  }
+  .cart-btnn{
+    width: 70px;
+    height: 70px;
+    margin-top: 45px;
+    background-color: inherit;
+    border: none;
+    color: black;
+  }
+  .cart-info-btn{
+      margin-left: 500px;
+  }
+
+  #cart-products{
+      width: 80%;
+      margin-left: 10%;
+      background-color: white;
+      height: auto;
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+  .cardItem{
+      width:30%;
+      height: 490px;
+      border: 1px solid;
+      border: 1px solid gray;
+      background-color:  lightgrey;
+      margin-bottom: 20px;
+      box-shadow: 5px 5px gray;
+      border-radius: 10px;
+  }
+
+  .cardImg{
+      width: 100%;
+      height: 350px;
+      border-radius: 10px;
+      
+  }
+  .cardHeaderInfo{
+      position: relative;
+  }
+  .cardCategory{
+      margin-left: 10px;
+      font-size: 25px;
+      position: absolute;
+      top: 355px;
+  }
+  .cardPrice{
+      position: absolute;
+      font-size: 25px;
+      margin-left: 80%;
+      top: 355px;
+      
+  }
+  .cardName{
+      margin-top: 35px;
+      text-align: center;
+      font-size: 30px;
+  }
+  
+
+

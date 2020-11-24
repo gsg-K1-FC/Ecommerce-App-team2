@@ -58,6 +58,6 @@ createCart(products);
         document.querySelectorAll('.cardInfo').forEach(function(a){
             a.remove()
             })
-        products = products.filter((product) => product.name == item);
-        createCart(products);
+        let search = products.filter((product) => product.name == item);
+        createCart(search);
     })

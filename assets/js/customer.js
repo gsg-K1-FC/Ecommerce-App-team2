@@ -1,23 +1,47 @@
+let storedProducts = JSON.parse(localStorage.getItem("products"));
+let cartItem = storedProducts ? storedProducts : [];
 let productWrapper = document.getElementById("cart-products");
 let products=[{
     id: 0, 
     name: "coat",
-    price: 60,
+    price: 660,
     category: "clothes",
     URL: "../../assets/images/coot.jpg"},
     {
         id: 1, 
         name: "palette",
-        price: 25,
+        price: 110,
         category: "Makeup",
         URL: "../../assets/images/palette.jpg"},
         {
             id: 2, 
             name: "sneaker",
-            price: 35,
+            price: 264,
             category: "shoes",
-            URL: "../../assets/images/nike.jpg"}];
-        let cartItem=[];
+            URL: "../../assets/images/nike.jpg"},
+            {
+                id: 3, 
+                name: "lipstick",
+                price: 60,
+                category: "Makeup",
+                URL: "../../assets/images/lipstick.jpg"
+            },
+            {
+                id: 4, 
+                name: "scarft",
+                price: 80,
+                category: "clothes",
+                URL: "../../assets/images/scarf.webp"
+            },
+            {
+                id: 0, 
+                name: "boot",
+                price: 320,
+                category: "shoes",
+                URL: "../../assets/images/images.jpg"
+            },
+            
+];
 function createCart(products){
     productWrapper.innerHTML = "";
     products.forEach(function(product){
@@ -67,6 +91,7 @@ function createCart(products){
         cartButton.className = 'buttonStyle';
         cartButton.addEventListener('click', function(){
             cartItem.push(product);
+            localStorage.setItem("products", JSON.stringify(cartItem));
         })
     });
 }

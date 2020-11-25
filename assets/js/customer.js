@@ -1,63 +1,111 @@
-let productWrapper = document.getElementsByClassName("products")[0];
-console.log(productWrapper);
+let productWrapper = document.getElementById("cart-products");
 let products=[{
     id: 0, 
-    name: "coot",
-    price: 25,
-    category: "Clothes",
+    name: "coat",
+    price: 60,
+    category: "clothes",
     URL: "../../assets/images/coot.jpg"},
     {
         id: 1, 
         name: "palette",
-        price: 35,
+        price: 25,
         category: "Makeup",
         URL: "../../assets/images/palette.jpg"},
         {
             id: 2, 
-            name: "scarf",
+            name: "sneaker",
             price: 35,
-            category: "clothes",
-            URL: "../../assets/images/scarf.webp"}];
+            category: "shoes",
+            URL: "../../assets/images/nike.jpg"}];
         let cartItem=[];
 function createCart(products){
+    productWrapper.innerHTML = "";
     products.forEach(function(product){
         let card = document.createElement("div");
-        card.className = 'cardInfo';
-        productWrapper.appendChild(card);
+        let cardHeaderInfo = document.createElement("div");
+
         let productImage = document.createElement("img");
-        productImage.className= 'image-style';
         productImage.src = product.URL;
-        card.appendChild(productImage);
         let productPrice = document.createElement("h3");
         productPrice.textContent = product.price;
         let productCategory = document.createElement("h3");
         productCategory.textContent = product.category;
-        let productName = document.createElement("span");
+        let productName = document.createElement("h2");
         productName.textContent = product.name;
+        let dolarsign = document.createElement("span");
+        dolarsign.textContent = ' $';
+        let productDetail = document.createElement("p");
+        productDetail.textContent = product.detail;
+
+        cardHeaderInfo.appendChild(productImage);
+        cardHeaderInfo.appendChild(productCategory);
+        productPrice.appendChild(dolarsign);
+        cardHeaderInfo.appendChild(productPrice);
+        card.appendChild(cardHeaderInfo);
         card.appendChild(productName);
-        card.appendChild(productCategory);
-        card.appendChild(productPrice);
+        card.appendChild(productDetail);
+        productWrapper.appendChild(card);
+        
+        
+        card.className = 'cardItem';
+        cardHeaderInfo.className = 'cardHeaderInfo';
+        productImage.className = 'cardImg';
+        productCategory.className = 'cardCategory';
+        productPrice.className = 'cardPrice';
+        productName.className = 'cardName';
+        productDetail.className= 'cardDetail'
+
+
         let cartIcon = document.createElement("i");
-        cartIcon.className = 'fas fa-cart-plus';
-        let cartButton = document.createElement("button")
-        cartButton.className = 'buttonStyle';
+        let cartButton = document.createElement("button");
+        let addButton = document.createElement("div");
         cartButton.appendChild(cartIcon);
-        card.appendChild(cartButton);
+        addButton.appendChild(cartButton);
+        addButton.className = 'addButton';
+        card.appendChild(addButton);
+        cartIcon.className = 'fas fa-cart-plus';
+        cartButton.className = 'buttonStyle';
         cartButton.addEventListener('click', function(){
             cartItem.push(product);
-            console.log(cartItem);
         })
     });
 }
 createCart(products);
-    let icon = document.getElementById('searchBtn');
-    icon.addEventListener('click', function(e){
+    let searchForm = document.getElementById('form');
+    searchForm.addEventListener('submit', function(e){
         e.preventDefault();
-        let item = document.getElementById("search-engine").value;
-        console.log(item);
-        document.querySelectorAll('.cardInfo').forEach(function(a){
-            a.remove()
-            })
-        let search = products.filter((product) => product.name == item);
+        let searchProduct = document.getElementById("search-engine").value.toLowerCase();
+        let search = products.filter((product) => product.name == searchProduct);
         createCart(search);
+    })
+    let back = document.getElementsByClassName('backButton')[0];
+    back.addEventListener('click', function(){
+        createCart(products);
+    });
+    let clothes = document.getElementById("clothes");
+    clothes.addEventListener('click', function(){
+        let clothesProduct = products.filter((product) => product.category == "clothes")
+            createCart(clothesProduct);
+    })
+    let makeup = document.getElementById("makeUp");
+    makeup.addEventListener('click', function(){
+        let makeUpProduct = products.filter((product) => product.category == "Makeup")
+            createCart(makeUpProduct);
+    })
+    let shoes = document.getElementById("shoes");
+    shoes.addEventListener('click', function(){
+        let shoesProduct = products.filter((product) => product.category == "shoes")
+            createCart(shoesProduct);
+    })
+    let assending = document.getElementById("ascendingOrder");
+    assending.addEventListener('click', function(){
+        products.sort((a, b) => a.price-b.price)
+        createCart(products);
+
+    })
+    let descendingOrder = document.getElementById("descendingOrder");
+    descendingOrder.addEventListener('click', function(){
+        products.sort((a, b) => b.price-a.price)
+        createCart(products);
+
     })

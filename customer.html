@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/customer.css">
+    <!-- <link rel="stylesheet" href="./assets/css/customer.css"> -->
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://kit.fontawesome.com/34321f5008.js" crossorigin="anonymous"></script>
@@ -15,7 +15,7 @@
 <header class="header cs">
   <a href="index.html" class="brandName">Fashion</a>
   <div class="search-container">
-   <form >
+   <form id="form">
      <input id="search-engine" type="text" placeholder="Search.." name="search" >
      <button id="searchBtn" type="submit"><i class="fa fa-search"></i></button>
    </form>
@@ -30,22 +30,24 @@
   <div class="dropdown">
       <button class="dropbtn" >Categories <i class="fa fa-caret-down"></i></button>
       <div class="dropdown-content" id="myDropdown">
-          <a href="#">Clothes</a>
-          <a href="#">Make up</a>
-          <a href="#">Shoes</a>
+          <a href="#" id = "clothes" >Clothes</a>
+          <a href="#" id = "makeUp">Make up</a>
+          <a href="#" id = "shoes">Shoes</a>
       </div>
   </div>
   <div class="dropdown">
       <button class="dropbtn">Filter by price <i class="fa fa-caret-down"></i></button>
       <div class="dropdown-content">
-          <a href="#">Low th High</a>
-          <a href="#">High to low</a>
+          <a href="#" id = "ascendingOrder" >Low th High</a>
+          <a href="#" id = "descendingOrder">High to low</a>
       </div>
   </div>
 </div>
-<div class="product-container">
-        <div class="products">
+        <div id="cart-products">
     </div>
+    <button class="backButton">Back to Store</button>
     <script src="./assets/js/customer.js"></script>
+
+    
 </body>
 </html>

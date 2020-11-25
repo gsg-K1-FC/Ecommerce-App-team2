@@ -52,8 +52,10 @@ function showProducts() {
             let confirmDelete = confirm("Are you sure you want to delete this product from your cart?");
         
             if (confirmDelete) {
-                products = products.filter(remainingProduct => remainingProduct.id !== product.id); //Make a new product list and only keep the products which don't match this deleted product's id
-                showProducts();
+                products = products.filter(remainingProduct => remainingProduct.id !== product.id);
+                 //Make a new product list and only keep the products which don't match this deleted product's id
+                 localStorage.setItem("products", JSON.stringify(products));
+                 showProducts();
                 calcSum();
               }        
         });

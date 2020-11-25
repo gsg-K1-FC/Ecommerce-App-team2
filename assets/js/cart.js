@@ -1,4 +1,3 @@
-//let allProducts = JSON.parse(localStorage.getItem("my_products"));
 let products = [
     { id: 0, name: 'T-shirt', price: 25, category: 'clothes', URL: './assets/images/1.jpg', detail: 'This product from fashion store'},
     { id: 1, name: 'aaa', price: 50, category: 'clothes', URL: './assets/images/2.jpg', detail: 'This product from fashion store' },
@@ -11,10 +10,9 @@ let products = [
 ]
 
 let cards = document.getElementById("cart-products");
-//localStorage.setItem("my_products", JSON.stringify(products));
-
 
 showProducts();
+// this function is to show products in castomer cart
 function showProducts() {
 
     cards.innerHTML = "";
@@ -50,7 +48,6 @@ function showProducts() {
         card.appendChild(deleteBtn);
         cards.appendChild(card);
 
-
         card.className = 'cardItem';
         cardHeaderInfo.className = 'cardHeaderInfo';
         productImage.className = 'cardImg';
@@ -60,35 +57,26 @@ function showProducts() {
         productDetail.className= 'cardDetail';
         deleteBtn.id = 'cartDeleteBtn';
 
-
+        // this function is to delete item from customer cart
         deleteBtn.addEventListener("click", function() {
             let confirmDelete = confirm("Are you sure you want to delete this product from your cart?");
         
             if (confirmDelete) {
-                products.splice(i,1);
+                products = products.filter(remainingProduct => remainingProduct.id !== product.id); //Make a new product list and only keep the products which don't match this deleted product's id
                 showProducts();
-                sum=0;
                 calcSum();
-            }
-            
+              }        
         });
-        
-
-
     }
-    );
-
-
-
-    
+    );    
 }
 
-let cartSum = document.getElementById("cartSum");
-let cartTax = document.getElementById("cartTax");
-let cartTotlaSum = document.getElementById("cartTotalSum");
-let sum = 0, tax,totalSum;
-
+// this function is to calculate the total price of customer cart
 function calcSum() {
+    let cartSum = document.getElementById("cartSum");
+    let cartTax = document.getElementById("cartTax");
+    let cartTotlaSum = document.getElementById("cartTotalSum");
+    let sum = 0, tax,totalSum;
     for (let index = 0; index < products.length; index++) {
 
         sum += products[index].price;

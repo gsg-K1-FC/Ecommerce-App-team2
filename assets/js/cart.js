@@ -1,14 +1,4 @@
-let products = [
-    { id: 0, name: 'T-shirt', price: 25, category: 'clothes', URL: './assets/images/1.jpg', detail: 'This product from fashion store'},
-    { id: 1, name: 'aaa', price: 50, category: 'clothes', URL: './assets/images/2.jpg', detail: 'This product from fashion store' },
-    { id: 2, name: 'bbb', price: 200, category: 'clothes', URL: './assets/images/3.jpg', detail: 'This product from fashion store' },
-    { id: 3, name: 'ccc', price: 200, category: 'clothes', URL: './assets/images/4.jpg', detail: 'This product from fashion store' },
-    { id: 4, name: 'ddd', price: 330, category: 'clothes', URL: './assets/images/5.jpg', detail: 'This product from fashion store' },
-    { id: 5, name: 'eee', price: 75, category: 'clothes', URL: './assets/images/6.jpg', detail: 'This product from fashion store' },
-    { id: 6, name: 'fff', price: 425, category: 'clothes', URL: './assets/images/7.jpg', detail: 'This product from fashion store' },
-    { id: 7, name: 'ggg', price: 170, category: 'clothes', URL: './assets/images/8.jpg', detail: 'This product from fashion store' }
-]
-
+let products = JSON.parse(localStorage.getItem("products"));
 let cards = document.getElementById("cart-products");
 
 showProducts();
@@ -62,8 +52,10 @@ function showProducts() {
             let confirmDelete = confirm("Are you sure you want to delete this product from your cart?");
         
             if (confirmDelete) {
-                products = products.filter(remainingProduct => remainingProduct.id !== product.id); //Make a new product list and only keep the products which don't match this deleted product's id
-                showProducts();
+                products = products.filter(remainingProduct => remainingProduct.id !== product.id);
+                 //Make a new product list and only keep the products which don't match this deleted product's id
+                 localStorage.setItem("products", JSON.stringify(products));
+                 showProducts();
                 calcSum();
               }        
         });

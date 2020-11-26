@@ -59,5 +59,3 @@ Javascript
 *  Meera : https://github.com/meeraqunaibi
 
 *  Osama: https://github.com/osamaayyad99
-
-*  Bashaer: https://github.com/bashaerhaddad

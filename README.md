@@ -1,3 +1,5 @@
+<a href="https://gsg-k1-fc.github.io/Ecommerce-App-team2/" alt="github pages">github pages for our website </h1>
+
 # Link for the initial design_ 
 https://www.figma.com/file/2W1rfsbd1PKzDgLnXClMe7/E-Commerce-Team-2?node-id=0%3A1
 # What ?
@@ -57,5 +59,3 @@ Javascript
 *  Meera : https://github.com/meeraqunaibi
 
 *  Osama: https://github.com/osamaayyad99
-
-*  Bashaer: https://github.com/bashaerhaddad

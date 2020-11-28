@@ -53,18 +53,20 @@ function createCart(products){
         let deleteIcon= document.createElement("button");
         deleteIcon.innerHTML = '<i class="fa fa-trash"></i>' ;
         deleteIcon.addEventListener("click", function () {
-            let confirmationResults = confirm(
-              "Are you sure you want to delete this product"
-            );
-      
-            if (confirmationResults) {
-              products.splice(i, 1);
-              createCart(products);
-            }
-          });
-          let editIcon = document.createElement("button");
-          editIcon.innerHTML= '<i class="fa fa-edit"></i>';
 
+           
+            let confirmationResults = confirm(
+                "Are you sure you want to delete this product"
+              );
+        
+              if (confirmationResults) {
+                products.splice(i, 1);
+                createCart(products);
+              }
+            });
+            let editIcon = document.createElement("button");
+            editIcon.innerHTML= '<i class="fa fa-edit"></i>';
+  
 
         cardHeaderInfo.appendChild(productImage);
         cardHeaderInfo.appendChild(productCategory);

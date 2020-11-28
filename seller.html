@@ -21,12 +21,69 @@
         <a href="customer.html" id="customerbtn">Customer</a>
         <a href="seller.html" id="sellerbtn">Seller</a>
     </header>
-    
-
-
-     
-     <script src="./assets/js/main.js"></script>
-     
-    
+    <div class="main_products">
+        <button class="add_product" id="addProductBtn">Add your Product</button>
+    </div>
+    <div id="cart-products">
+    </div>
+  <div class="wrapper">
+    <div class="form">
+        <form>  
+            <div>
+             <input id="id" type="hidden" name="id" />
+            </div> <br>
+              <div class="all">
+                 <label class="" for="name" id="name-label">Name of the product:</label> <input id="name" placeholder="Glory dress" required="" type="words">
+            </div>
+            <br>
+      
+            <div class="all">
+              <label class="" for="email" id="detail-label">Details:</label> <input  id="detail" name="detail" placeholder="This is an elegant dress made of cotton" required="" type="detail">
+            </div>
+            <br>
+            <div class="all">
+              <label class="" for="price" id="price-label">Price :</label> <input id="number"  placeholder="price in dollar $$" required="" type="number">
+            </div>
+            <br>
+            <div>
+               <label for="url">Image  Url : </label> <input id="image-url" placeholder="put the url of the image of your product here" type="url">
+            </div>
+            <br>
+            <div class="all">
+              <label for="Category" id="category-label">Category:</label> <select id="dropdown">
+                <option disabled selected value="">
+                  Select a cetagory..
+                </option>
+                <option>
+                Sports
+                </option>
+                <option>
+                Women
+                </option>
+                <option>
+                Men
+                </option>
+                <option>
+                Shoes
+                </option>
+                <option>
+                Makeup
+                </option>
+                <option>
+                    Jewellery 
+                </option>
+                <option>
+                    clothes
+                </option>
+              </select>
+            </div>
+             <div class="buttons">
+              <button id="cancel">Cancel</button>
+              <button id="submit">Add</button>
+            </div>
+          </form>
+    </div>
+  </div>
+     <script src="./assets/js/seller.js"></script>
 </body>
 </html>

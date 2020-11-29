@@ -168,6 +168,7 @@ createCart(products);
             
         }
         localStorage.setItem("products", JSON.stringify(products));
+        
         modal.classList.remove('active');
         addProductBtn.setAttribute("isadded",false);
     });

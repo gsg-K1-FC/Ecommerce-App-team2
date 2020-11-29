@@ -1,7 +1,10 @@
 let storedProducts = JSON.parse(localStorage.getItem("products"));
 let cartItem = storedProducts ? storedProducts : [];
 let productWrapper = document.getElementById("cart-products");
-let divEdit = document.getElementById("wrapper");
+let divEdit = document.getElementById("modal");
+let addProductBtn= document.getElementById('addProductBtn');
+
+// Adding products to the seller view
 let products= storedProducts ? storedProducts : [{
     id: 0, 
     name: "coat",
@@ -23,6 +26,8 @@ let products= storedProducts ? storedProducts : [{
             URL: "../../assets/images/nike.jpg"},
             
 ];
+
+// each product has an id
 let idKey=0; 
 if (!products.length) {
     idKey = 1;
@@ -32,11 +37,12 @@ if (!products.length) {
 }
 
             
-
+// creating the cart
 function createCart(products){
     productWrapper.innerHTML = "";
     products.forEach(function(product, i){
         let card = document.createElement("div");
+        card.setAttribute("id", i);
         let cardHeaderInfo = document.createElement("div");
         let productImage = document.createElement("img");
         let buttonDiv = document.createElement("div");
@@ -55,8 +61,8 @@ function createCart(products){
         deleteIcon.innerHTML = '<i class="fa fa-trash"></i>' ;
         deleteIcon.addEventListener("click", function () {
 
-           
-            let confirmationResults = confirm(
+//   Make a functional delete button
+         let confirmationResults = confirm(
                 "Are you sure you want to delete this product?"
               );
         
@@ -65,10 +71,36 @@ function createCart(products){
                 createCart(products);
               }
             });
-             
+        //  Make a functional  edit button
             let editIcon = document.createElement("button");
             editIcon.innerHTML= '<i class="fa fa-edit"></i>';
-       
+            editIcon.addEventListener("click", function (){
+                card.setAttribute("selected", true);
+                modal.classList.add("active");
+                let selectedCard =card.getAttribute("selected");
+                console.log(selectedCard)
+
+                    products.map((product,i) => {
+               
+                        if (selectedCard == true ) {
+                            console.log(productName)
+                            product.name= productName;
+                            product.price = productPrice;
+                            product.detail = productDetail;
+                            product.category = categoryOfProduct;
+                            product.image = ImageUrl;
+                            modal.classList.remove("active");
+                            document.getElementById("name").value = "";
+                            document.getElementById("price").value= "";
+                            document.getElementById("details").value= "";
+                            document.getElementById("category").value= "";
+                            document.getElementById("Image").value ="";
+                           
+                            createCart(products);
+                        }
+                    })
+            });
+        //    appending fathers to the children
         cardHeaderInfo.appendChild(productImage);
         cardHeaderInfo.appendChild(productCategory);
         productPrice.appendChild(dolarsign);
@@ -81,6 +113,9 @@ function createCart(products){
         card.appendChild(buttonDiv);
         productWrapper.appendChild(card);
 
+
+
+    //    giving dom elements classes
         card.className = 'cardItem';
         cardHeaderInfo.className = 'cardHeaderInfo';
         productImage.className = 'cardImg';
@@ -104,7 +139,9 @@ createCart(products);
         let productPrice =document.getElementById("number").value.trim();
         let  ImageUrl= document.getElementById("image-url").value.trim();
         let  categoryOfProduct = document.getElementById("dropdown").value.trim();
-        let idValue = document.getElementById("id");       
+        let isAddedAttribute = addProductBtn.getAttribute("isadded");  
+        console.log(isAddedAttribute, )
+        
          if(productName === ""){
             alert("Please Enter the name of the product");
         }
@@ -120,23 +157,31 @@ createCart(products);
         else if (categoryOfProduct === "") {
             alert ("Please select the category of the product");
         }
-        else {
-            products.push( {id: idKey, name: productName, price:productPrice, detail: productDetail, image:ImageUrl, category: categoryOfProduct });
+        else if ( isAddedAttribute) {
+            products.push( {id: idKey, name: productName, price:productPrice, detail: productDetail, URL:ImageUrl, category: categoryOfProduct });
             document.getElementById("name").value=""; 
             document.getElementById("detail").value="";
             document.getElementById("number").value="";
             document.getElementById("image-url").value= "";
             document.getElementById("dropdown").value="",
             createCart(products); 
+            
         }
         localStorage.setItem("products", JSON.stringify(products));
+        modal.classList.remove('active');
+        addProductBtn.setAttribute("isadded",false);
     });
- document.getElementById('addProductBtn').addEventListener('click', showForm)
+   
+//  Pop up form when add product button is clicked on
+ addProductBtn.addEventListener('click', function(){
+    addProductBtn.setAttribute("isadded", true);
+     showForm()
+     
+ })
  function showForm () {
      modal.classList.add('active');
-     overlay.classList.add('active'); //   I need to come back to this because it is not working
      }
-
+// make an X icon which removes form
  document.getElementById("closeIcon").addEventListener('click', getOutOfForm)
  function getOutOfForm() {
    modal.classList.remove('active');

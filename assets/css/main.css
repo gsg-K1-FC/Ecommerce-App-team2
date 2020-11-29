@@ -9,6 +9,7 @@
     height: 50px;
      background-color: #8C817D;
     display: flex;
+    z-index: 1;
 }
 .backButton{
     background: none;

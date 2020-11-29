@@ -132,5 +132,4 @@ createCart(products);
     descendingOrder.addEventListener('click', function(){
         products.sort((a, b) => b.price-a.price)
         createCart(products);
-
     })

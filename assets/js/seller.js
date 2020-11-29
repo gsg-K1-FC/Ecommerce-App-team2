@@ -1,6 +1,7 @@
 let storedProducts = JSON.parse(localStorage.getItem("products"));
 let cartItem = storedProducts ? storedProducts : [];
 let productWrapper = document.getElementById("cart-products");
+let divEdit = document.getElementById("wrapper");
 let products= storedProducts ? storedProducts : [{
     id: 0, 
     name: "coat",
@@ -56,7 +57,7 @@ function createCart(products){
 
            
             let confirmationResults = confirm(
-                "Are you sure you want to delete this product"
+                "Are you sure you want to delete this product?"
               );
         
               if (confirmationResults) {
@@ -64,10 +65,16 @@ function createCart(products){
                 createCart(products);
               }
             });
+             
             let editIcon = document.createElement("button");
             editIcon.innerHTML= '<i class="fa fa-edit"></i>';
-  
-
+            editIcon.addEventListener("click", showForm);
+            function showForm() {
+                if (document.querySelector("#form input.selected") != null ) {
+                    document.querySelector()
+                }
+            }
+       
         cardHeaderInfo.appendChild(productImage);
         cardHeaderInfo.appendChild(productCategory);
         productPrice.appendChild(dolarsign);
@@ -130,3 +137,14 @@ createCart(products);
         }
         localStorage.setItem("products", JSON.stringify(products));
     });
+ document.getElementById('addProductBtn').addEventListener('click', showForm)
+ function showForm () {
+     modal.classList.add('active');
+     overlay.classList.add('active'); //   I need to come back to this because it is not working
+     }
+
+ document.getElementById("closeIcon").addEventListener('click', getOutOfForm)
+ function getOutOfForm() {
+   modal.classList.remove('active');
+
+ }

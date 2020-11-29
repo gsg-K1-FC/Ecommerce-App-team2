@@ -26,8 +26,12 @@
     </div>
     <div id="cart-products">
     </div>
-  <div class="wrapper">
-    <div class="form">
+  <div id="modal" class="modal">
+    <div class="modal-header">
+      <div class="title">Add your products</div>
+      <button id="closeIcon" class="close-button">&times;</button>
+    </div>
+    <div id="form" class= "modal-body">
         <form>  
             <div>
              <input id="id" type="hidden" name="id" />
@@ -78,12 +82,13 @@
               </select>
             </div>
              <div class="buttons">
-              <button id="cancel">Cancel</button>
+              <!-- <button id="cancel">Cancel</button> -->
               <button id="submit">Add</button>
             </div>
           </form>
     </div>
   </div>
-     <script src="./assets/js/seller.js"></script>
+  <div class="overlay"></div>
+       <script src="./assets/js/seller.js"></script>
 </body>
 </html>

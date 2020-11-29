@@ -71,35 +71,9 @@ function createCart(products){
                 createCart(products);
               }
             });
-        //  Make a functional  edit button
+        //  Make an edit button
             let editIcon = document.createElement("button");
             editIcon.innerHTML= '<i class="fa fa-edit"></i>';
-            editIcon.addEventListener("click", function (){
-                card.setAttribute("selected", true);
-                modal.classList.add("active");
-                let selectedCard =card.getAttribute("selected");
-                console.log(selectedCard)
-
-                    products.map((product,i) => {
-               
-                        if (selectedCard == true ) {
-                            console.log(productName)
-                            product.name= productName;
-                            product.price = productPrice;
-                            product.detail = productDetail;
-                            product.category = categoryOfProduct;
-                            product.image = ImageUrl;
-                            modal.classList.remove("active");
-                            document.getElementById("name").value = "";
-                            document.getElementById("price").value= "";
-                            document.getElementById("details").value= "";
-                            document.getElementById("category").value= "";
-                            document.getElementById("Image").value ="";
-                           
-                            createCart(products);
-                        }
-                    })
-            });
         //    appending fathers to the children
         cardHeaderInfo.appendChild(productImage);
         cardHeaderInfo.appendChild(productCategory);

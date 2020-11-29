@@ -68,12 +68,6 @@ function createCart(products){
              
             let editIcon = document.createElement("button");
             editIcon.innerHTML= '<i class="fa fa-edit"></i>';
-            editIcon.addEventListener("click", showForm);
-            function showForm() {
-                if (document.querySelector("#form input.selected") != null ) {
-                    document.querySelector()
-                }
-            }
        
         cardHeaderInfo.appendChild(productImage);
         cardHeaderInfo.appendChild(productCategory);
